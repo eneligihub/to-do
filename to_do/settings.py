@@ -65,7 +65,6 @@ WSGI_APPLICATION = 'to_do.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-
     "default": {
         "ENGINE": config('DB_ENGINE'),
         "NAME":"to_do",
@@ -73,7 +72,6 @@ DATABASES = {
         "PASSWORD": config('DB_PASSWORD'),
         "HOST": "localhost",
         "PORT": config('DB_PORT'),
-
     }
 }
 
