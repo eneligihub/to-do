@@ -48,3 +48,5 @@ class CartItem(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
 
+def __str__(self):
+    return self.title
