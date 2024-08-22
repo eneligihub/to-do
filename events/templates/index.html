@@ -6,19 +6,22 @@
 
 <h1>Find Events by Location and Date</h1>
 <div class="find-events">
-<form method="get" action="{% url 'all_events' %}">
-    <label for="location">Choose a location:</label>
-    <select name="location" id="location">
-        <option value="">--Select Location--</option>
-        {% for location in locations %}
-            <option value="{{ location.id }}">{{ location.name }}</option>
-        {% endfor %}
-    </select>
+    <div >
+    <form method="get" action="{% url 'all_events' %}">
+        <label for="location">Choose a location:</label>
+        <select name="location" id="location">
+            <option value="">--Select Location--</option>
+            {% for location in locations %}
+                <option value="{{ location.id }}">{{ location.name }}</option>
+            {% endfor %}
+        </select>
 
-    <label for="date">Choose a date (optional):</label>
-    <input type="date" name="date" id="date">
-<br>
-    <button type="submit">Find Events</button>
-</form>
+        <label for="date">Choose a date (optional):</label>
+        <input type="date" name="date" id="date">
+    <br>
+        <button type="submit">Find Events</button>
+    </form>
+    </div>
 </div>
+
 {% endblock %}

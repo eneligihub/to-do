@@ -8,6 +8,8 @@ from django.http import JsonResponse
 from django.contrib import messages
 from datetime import datetime
 
+def landing_page(request):
+    return render(request, 'landing.html')
 
 def index(request):
     locations = Location.objects.all()
